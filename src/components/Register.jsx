@@ -9,9 +9,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import { handleGoogleSignIn } from "./firebase";
+// import { handleGoogleSignIn } from "./firebase";
 import { FcGoogle } from "react-icons/fc";
-import { auth, createUserWithEmailAndPassword } from "./firebase";
+import { auth, createUserWithEmailAndPassword, GoogleAuthProvider,
+  signInWithPopup,} from "./firebase";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "./firebase";
 import { toast, ToastContainer } from "react-toastify";
@@ -100,6 +101,20 @@ const SignUp = () => {
     setSuccess(true);
     toast.success("Registration Successfull");
   };
+
+   const handleGoogleSignUP = async () => {
+     const provider = new GoogleAuthProvider();
+     try {
+       const result = await signInWithPopup(auth, provider);
+       console.log(result);
+       toast.success("Sign-in successful");
+       setTimeout(() => {
+         navigate("/login");
+       }, 4000);
+     } catch (error) {
+       console.log(error);
+     }
+   };
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -462,7 +477,7 @@ const SignUp = () => {
                     or
                   </span>
                   <button
-                    onClick={handleGoogleSignIn}
+                    onClick={handleGoogleSignUP}
                     className=" flex justify-center gap-3 w-full py-2 bg-teal-500 shadow-lg shadow-teal-500/50 hover:shadow-teal-500/40 text-white font-semibold rounded-lg"
                   >
                     {" "}

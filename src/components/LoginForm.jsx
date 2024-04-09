@@ -1,10 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import {
-  auth,
-  signInWithEmailAndPassword,
-  handleGoogleSignIn,
-} from "./firebase";
+import { auth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "./firebase";
 import { FcGoogle } from "react-icons/fc";
 import { getFirestore, collection, getDocs, where } from "firebase/firestore";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
@@ -19,6 +15,20 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [isPwdVisible, setIsPwdVisible] = useState(false);
   const navigate = useNavigate()
+
+  const handleGoogleSignIn = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+      const result = await signInWithPopup(auth, provider);
+      console.log(result);
+      toast.success("Sign-in successful");
+      setTimeout(() => {
+        navigate("/landing-page");
+      }, 4000);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const handleSignIn = async (e) => {
     e.preventDefault();
