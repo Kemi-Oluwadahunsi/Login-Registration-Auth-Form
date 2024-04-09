@@ -88,7 +88,7 @@ const Login = () => {
       return userData;
     } catch (error) {
       console.error("Error fetching user data:", error);
-      toast.error("Error fetching user data");
+      toast.error("Incorrect Username");
     }
   };
 
@@ -99,7 +99,7 @@ const Login = () => {
       return match;
     } catch (error) {
       console.error("Error validating password:", error);
-      toast.error("Error validating password");
+      toast.error("Password Incorrect");
     }
   };
 
