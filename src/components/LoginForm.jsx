@@ -66,7 +66,7 @@ const Login = () => {
     } catch (error) {
       // Handling sign-in errors
       console.error("Error signing in:", error.message);
-      toast.error("Error signing in:", error.message);
+      toast.error("Error signing in: User not Found");
     }
   };
 

@@ -3,14 +3,14 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const LandingPage = () => {
-    const navigate = useNavigate()
-    const handleClick = (e) => {
-        e.preventDefault()
-        toast.success("Logout Successful!")
-        setTimeout(() => {
-          navigate("/login");
-        }, 2000);
-    }
+  const navigate = useNavigate();
+  const handleClick = (e) => {
+    e.preventDefault();
+    toast.success("Logout Successful!");
+    setTimeout(() => {
+      navigate("/login");
+    }, 2000);
+  };
   return (
     <div className="bg-[#10416A]">
       <div className="flex items-center justify-center h-screen bg-hero-pattern bg-center bg-contain bg-no-repeat">
@@ -23,11 +23,12 @@ const LandingPage = () => {
             Welcome To KodeMaven
           </p>
 
-          <div onClick={handleClick} className=" text-gray-50 bg-gradient-to-r from-[#318a96] to-[#381d53] py-5 px-8 rounded-md font-bold lg:hover-transform lg:hover:scale-105">
-            <p>
-              Logout
-            </p>
-          </div>
+          <button
+            onClick={handleClick}
+            className=" text-gray-50 bg-gradient-to-r from-[#318a96] to-[#381d53] py-5 px-8 rounded-md font-bold lg:hover-transform lg:hover:scale-105"
+          >
+            Logout
+          </button>
         </section>
       </div>
       <div className="z-[10000]">
