@@ -123,7 +123,7 @@ const Login = () => {
               <input
                 className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none"
                 onChange={(e) => setEmail(e.target.value)}
-                type="email"
+                type="text"
                 value={email}
                 placeholder="Enter your email or username"
               />
