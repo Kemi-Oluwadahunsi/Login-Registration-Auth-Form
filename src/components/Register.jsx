@@ -17,7 +17,8 @@ import { db } from "./firebase";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const USER_REGEX = /^[a-zA-Z][a-zA-Z\s-]{3,}$/;
+const USER_REGEX = /^[a-zA-Z0-9_-][a-zA-Z0-9_\-\s]{3,}$/;
+
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const PHONE_REGEX = /^\+?\d{1,3}?\d{10}$/;
