@@ -54,12 +54,26 @@ npm run dev
 
 ## Usage
 - Navigate to the Registration page by clicking on the signup button on the homepage.
+  
+  <img src="https://res.cloudinary.com/dee9teadk/image/upload/v1716272242/Home_a7z2bw.png" alt="home" />
+  
 - Enter Your correct details in the input fields. Make sure you pass the validations by checking if the red times change to a green tick.
+  
+  <img src="https://res.cloudinary.com/dee9teadk/image/upload/v1716272240/register_v9ubkt.png" alt="reg" />
+  
 - Click on submit, and you should see a toast message that says 'registration successful'.
 - Alternatively, you can use the Google Sign-In button to log in with your Google account, it automatically signs you up as well.
 - After a successful registration, you will be redirected automatically to the Login page.
+  
+  <img src="https://res.cloudinary.com/dee9teadk/image/upload/v1716272663/login_wn6eqm.png" alt="login" />
+  
 - Enter your email and password used during registration and it should log you in.
+  
+  <img src="https://res.cloudinary.com/dee9teadk/image/upload/v1716272239/signin_rqpyau.png" alt="success" />
+  
 - You will be redirected to a welcome page upon successful login, where you will also see the logout button that logs you out of the application.
+  
+  <img src="https://res.cloudinary.com/dee9teadk/image/upload/v1716272236/success_rmfjv2.png" alt="welcome" />
 
 ## Contributing
 
