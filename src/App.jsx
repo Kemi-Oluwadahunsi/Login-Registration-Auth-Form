@@ -8,7 +8,7 @@ import LandingPage from "./components/LandingPage";
 function App() {
   return (
     <>
-      <div className="bg-[#e2cbb3] h-screen w-screen">
+      <div className="bg-[#e2cbb3] h-screen w-screen max-w-[1600px] mx-auto">
         <Router>
           <Routes>
             <Route path="/" element={<Homepage />} />
